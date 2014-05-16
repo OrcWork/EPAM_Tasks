@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Isaev_Andery_Task4")]
+[assembly: AssemblyTitle("AI_Task1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EPAM Systems")]
-[assembly: AssemblyProduct("Isaev_Andery_Task4")]
+[assembly: AssemblyProduct("AI_Task1")]
 [assembly: AssemblyCopyright("Copyright © EPAM Systems 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("38abe138-689d-4e3f-a5df-b9eeb48868d5")]
+[assembly: Guid("a3a8cf9e-ca45-4091-b9af-614d5b715942")]
 
 // Version information for an assembly consists of the following four values:
 //
