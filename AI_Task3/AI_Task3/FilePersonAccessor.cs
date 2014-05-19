@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace Person
+namespace AI_Task3
 {
     public class FilePersonAccessor : IPersonAccessor
     {
@@ -19,7 +19,6 @@ namespace Person
             try
             {
                 StreamReader sr = new StreamReader(filename);
-
                 String line = sr.ReadToEnd();
                 Console.WriteLine(line);
                 sr.Close();
@@ -39,7 +38,6 @@ namespace Person
             Console.WriteLine("Введите имя для поиска");
             String line;
             String nm = Console.ReadLine();
-
             using (StreamReader sr = new StreamReader(filename))
             {
                 while ((line = sr.ReadLine()) != null)
@@ -51,7 +49,6 @@ namespace Person
                         Console.WriteLine(line);
                         break;
                     }
-
                 }
                 if (!name.Contains(nm))
                 {
@@ -77,7 +74,6 @@ namespace Person
                     String vl = Console.ReadLine();
                     value[i] = vl;
                 }
-
             }
             if (!name.Contains(nm))
             {
@@ -100,17 +96,13 @@ namespace Person
             {
                 if (name[i].ToString() == nm)
                 {
-
                     name.RemoveAt(i);
                     value.RemoveAt(i);
                 }
-
             }
-
             Rewrite();
             Console.ReadKey();
         }
-
 
         // Метод который парсит файл и записывает его в листы
         public void parseFile()
@@ -118,7 +110,6 @@ namespace Person
             try
             {
                 String line;
-
                 using (StreamReader sr = new StreamReader(filename))
                 {
                     while ((line = sr.ReadLine()) != null)
@@ -134,7 +125,6 @@ namespace Person
             {
                 Console.WriteLine("The process failed: {0}", e.ToString());
             }
-
         }
 
         //Метод перезаписи файла

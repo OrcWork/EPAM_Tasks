@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 
-namespace Person
+namespace AI_Task3
 {
-    class Person
+    class Program
     {
         static void Main(string[] args)
         {
@@ -18,6 +18,10 @@ namespace Person
             if (param == "Memory")
             {
                 Console.WriteLine("Работа с мемори");
+            }
+            if (param == "DataBase")
+            {
+                Console.WriteLine("Работа с базой данных");
             }
             Menu m = new Menu();
             m.MainMenu();

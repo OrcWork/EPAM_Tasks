@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace Person
+namespace AI_Task3
 {
     public class MemoryPersonAccessor : IPersonAccessor
     {
@@ -35,7 +35,6 @@ namespace Person
                 {
                     Console.WriteLine(name[i] + "=" + value[i]);
                 }
-
             }
             if (!name.Contains(nm))
             {
@@ -58,7 +57,6 @@ namespace Person
                     String vl = Console.ReadLine();
                     value[i] = vl;
                 }
-
             }
             if (!name.Contains(nm))
             {
@@ -82,9 +80,7 @@ namespace Person
                     name.RemoveAt(i);
                     value.RemoveAt(i);
                 }
-
             }
-
         }
 
         //Добавление нового значения в список
