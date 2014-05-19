@@ -19,6 +19,10 @@ namespace AI_Task3
             {
                 Console.WriteLine("Работа с мемори");
             }
+            if (param == "CustomORM")
+            {
+                Console.WriteLine("Работа с базой данных при помощи кастомного ORM");
+            }
             if (param == "DataBase")
             {
                 Console.WriteLine("Работа с базой данных");

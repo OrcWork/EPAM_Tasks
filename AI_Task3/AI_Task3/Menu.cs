@@ -11,6 +11,7 @@ namespace AI_Task3
     {
         String param = ConfigurationManager.AppSettings["Source"];
         DBPersonAccesor dbpa = new DBPersonAccesor();
+        ADONETPersonAccessor anpa = new ADONETPersonAccessor();
         public void MainMenu()
         {
             Console.WriteLine("1 - Отобразить все значения");
@@ -39,9 +40,13 @@ namespace AI_Task3
                         MemoryPersonAccessor mpa = new MemoryPersonAccessor();
                         mpa.GetAll();
                     }
-                    if (param == "DataBase")
+                    if (param == "CustomORM")
                     {
                         dbpa.GetAll(typeof(Person));
+                    }
+                    if (param == "DataBase")
+                    {
+                        anpa.GetAll();
                     }
                     MainMenu();
                     break;
@@ -59,9 +64,13 @@ namespace AI_Task3
                         MemoryPersonAccessor mpa = new MemoryPersonAccessor();
                         mpa.GetByName();
                     }
-                    if (param == "DataBase")
+                    if (param == "CustomORM")
                     {
                         dbpa.GetByName(typeof(Person).GetField("name"), typeof(Person));
+                    }
+                    if (param == "DataBase")
+                    {
+                        anpa.GetByName();
                     }
                     MainMenu();
                     break;
@@ -79,9 +88,13 @@ namespace AI_Task3
                         MemoryPersonAccessor mpa = new MemoryPersonAccessor();
                         mpa.Update();
                     }
-                    if (param == "DataBase")
+                    if (param == "CustomORM")
                     {
                         dbpa.Update(typeof(Person).GetField("name"), typeof(Person));
+                    }
+                    if (param == "DataBase")
+                    {
+                        anpa.Update();
                     }
                     MainMenu();
                     break;
@@ -99,9 +112,13 @@ namespace AI_Task3
                         MemoryPersonAccessor mpa = new MemoryPersonAccessor();
                         mpa.Delete();
                     }
-                    if (param == "DataBase")
+                    if (param == "CustomORM")
                     {
                         dbpa.Delete(typeof(Person).GetField("name"), typeof(Person));
+                    }
+                    if (param == "DataBase")
+                    {
+                        anpa.Delete();
                     }
                     MainMenu();
                     break;
@@ -119,12 +136,17 @@ namespace AI_Task3
                         MemoryPersonAccessor mpa = new MemoryPersonAccessor();
                         mpa.Add();
                     }
-                    if (param == "DataBase")
+                    if (param == "CustomORM")
                     {
                         dbpa.Add(typeof(Person).GetField("name"), typeof(Person), typeof(Person).GetField("value")); ;
                     }
+                    if (param == "DataBase")
+                    {
+                        anpa.Add();
+                    }
                     MainMenu();
                     break;
+
 
                 default:
                     Console.WriteLine("Выберите что-нибудь другое");
