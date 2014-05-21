@@ -52,7 +52,6 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,12 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseTestDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseTestDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DBPersonAccesor.cs" />
     <Compile Include="FilePersonAccessor.cs" />
     <Compile Include="IPersonAccessor.cs" />
     <Compile Include="MemoryPersonAccessor.cs" />
@@ -79,24 +72,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseTest.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DatabaseTestDataSet.xsc">
-      <DependentUpon>DatabaseTestDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseTestDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseTestDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseTestDataSet.xss">
-      <DependentUpon>DatabaseTestDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
